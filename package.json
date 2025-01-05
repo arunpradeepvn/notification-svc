@@ -4,7 +4,7 @@
   "description": "Push notification microservice using Node.js, Express, and TypeScript",
   "main": "dist/server.js",
   "engines": {
-    "node": "14.x"
+    "node": "22.x"
   },
   "scripts": {
     "start": "node server.js",
