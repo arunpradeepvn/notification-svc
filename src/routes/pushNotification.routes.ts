@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { sendNotification } from '../services/notification.service';
+import { send } from '../services/pushNotification.service';
 
 const router = Router();
 
@@ -19,7 +19,7 @@ const processNextRequest = async () => {
 
     try {
       // Process the request
-      await sendNotification(req, res);
+      await send(req, res);
     } catch (error) {
       res.status(500).json({ error: 'Failed to process notification' });
     } finally {

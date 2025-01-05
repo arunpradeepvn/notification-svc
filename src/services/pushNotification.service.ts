@@ -6,7 +6,7 @@ import { logger } from '../utils/logger';
 import { NotificationPayload } from '../types/notification.types';
 import { notificationSchema } from '../validation/notificationValidation';
 
-export const sendNotification = async (
+export const send = async (
   req: Request,
   res: Response
 ): Promise<void> => {

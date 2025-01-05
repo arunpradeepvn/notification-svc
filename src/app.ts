@@ -1,5 +1,6 @@
 import express from 'express';
-import notificationRoutes from './routes/notification.routes';
+
+import pushNotificationRoutes from './routes/pushNotification.routes';
 import healthRoutes from './routes/health.routes';
 import rootRoutes from './routes/root.routes';
 import { logger } from './utils/logger';
@@ -16,9 +17,9 @@ app.use((req, res, next) => {
 // Register routes
 app.get('/', rootRoutes);
 
-app.use('/api/health', healthRoutes);
+app.use('/health', healthRoutes);
 
-app.use('/api/notification', notificationRoutes);
+app.use('/pushNotification', pushNotificationRoutes);
 
 // Error-handling middleware
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
