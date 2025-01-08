@@ -15,11 +15,11 @@ app.use((req, res, next) => {
 });
 
 // Register routes
-app.get('/api', rootRoutes);
+app.get('/', rootRoutes);
 
-app.use('/api/health', healthRoutes);
+app.use('/health', healthRoutes);
 
-app.use('/api/pushNotification', pushNotificationRoutes);
+app.use('/pushNotification', pushNotificationRoutes);
 
 // Error-handling middleware
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
