@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 // Register routes
-app.get('/api', rootRoutes);
+app.get('/', rootRoutes);
 
 app.use('/api/health', healthRoutes);
 
